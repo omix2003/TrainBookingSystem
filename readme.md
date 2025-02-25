@@ -73,6 +73,3 @@ Contributions are welcome! Please fork the repository and create a pull request 
 
 This project is licensed under the MIT License. -->
 
-## Contact
-
-For any questions or suggestions, please contact Kalp Patel at kalppatel2024@gmail.com.
