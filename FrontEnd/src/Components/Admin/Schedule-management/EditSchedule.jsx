@@ -121,7 +121,7 @@ export default function EditSchedule() {
             setModalOpen(false)
             debounceFetchSchedules()
         } catch (error) {
-            notify("Serever error. Please try again later", 'error')
+            notify("Server error. Please try again later", 'error')
             console.error(error)
         }
     }

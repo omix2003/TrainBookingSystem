@@ -74,17 +74,17 @@ export default function PaymentPage() {
         console.log(result);
 
         if (!result.success) {
-            notify("An unexpected error occurred. Please try again later.", 'error')
+            notify("An unexpected error occurred. Please try again later.", 'error');
             setTimeout(() => {
-                navigate('/', { replace: true })
-            }, 2000)
-        }
-        else {
-            notify(result.message, 'success')
+                navigate('/', { replace: true });
+            }, 2000);
+        } else {
+            notify(result.message, 'success');
             setTimeout(() => {
-                navigate('/print-ticket', { replace: true })
-            }, 2000)
+                window.location.href = '/print-ticket'; // Force redirect to avoid stuck state
+            }, 2000);
         }
+        
     }
 
     const createOrder = async () => {
@@ -121,7 +121,7 @@ export default function PaymentPage() {
             const order = await createOrder();
 
             const options = {
-                key: 'rzp_test_wWZaLRITp28ltD',
+                key: 'rzp_test_DAFxUU4rkVrH57',
                 amount: order.amount / 100,
                 currency: order.currency,
                 name: 'Train Booking',
