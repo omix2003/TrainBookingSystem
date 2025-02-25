@@ -1,4 +1,4 @@
-# Yatra.com Travel Booking System (MERN Stack)
+# Railway Ticket Booking System (MERN Stack)
 
 A comprehensive travel booking system inspired by Yatra.com, developed using the MERN stack (MongoDB, Express, React, Node.js). It provides an integrated platform for users and administrators to manage train ticket bookings efficiently.
 
