@@ -4,11 +4,9 @@
   "description": "",
   "main": "index.js",
   "type": "module",
-"scripts": {
-  "start": "node index.js",
-  "dev": "nodemon index.js"
-}
-,
+  "scripts": {
+    "dev": "nodemon -r dotenv/config --experimental-json-modules src/index.js"
+  },
   "author": "Omkar Binage",
   "license": "ISC",
   "dependencies": {
