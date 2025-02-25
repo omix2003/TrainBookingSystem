@@ -4,7 +4,7 @@ import { addSchedule, deleteSchedule, getAllSchedule, updateSchedule } from "../
 
 const router = Router()
 
-router.route("/add-schedule").post( addSchedule)
+router.route("/add-schedule").post( isAdmin, addSchedule)
 router.route("/get-schedule").get(isAdmin, getAllSchedule)
 router.route("/delete-schedule/c/:trainId").delete(isAdmin, deleteSchedule)
 router.route("/update-schedule/c/:trainId").patch(isAdmin, updateSchedule)

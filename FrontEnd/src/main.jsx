@@ -127,6 +127,14 @@ const router = createBrowserRouter([
             )
           },
           {
+            path: "schedule-management/add-schedules",
+            element: (
+              <AuthLayout >
+                <AddSchedule />
+              </AuthLayout>
+            )
+          },
+          {
             path: "schedule-management/view-schedules",
             element: (
               <AuthLayout >
