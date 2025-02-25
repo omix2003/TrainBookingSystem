@@ -65,9 +65,6 @@ A comprehensive travel booking system inspired by Yatra.com, developed using the
 - **Admin Access**: Add new administrators or remove existing ones.
 
 
-## Contributing
-
-Contributions are welcome! Please fork the repository and create a pull request with your changes.
 
 <!-- ## License
 
