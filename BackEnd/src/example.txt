@@ -1,0 +1,287 @@
+{
+    "trainNo": 12345,
+    "trainName": "Rajdhani Express",
+    "route": [
+        {
+            "stationName": "New Delhi",
+            "stationCode": "NDLS",
+            "arrivalTime": "00:00",
+            "departureTime": "16:50",
+            "stopNumber": 1
+        },
+        {
+            "stationName": "Kanpur",
+            "stationCode": "CNB",
+            "arrivalTime": "19:40",
+            "departureTime": "19:45",
+            "stopNumber": 2
+        },
+        {
+            "stationName": "Allahabad",
+            "stationCode": "ALD",
+            "arrivalTime": "21:25",
+            "departureTime": "21:30",
+            "stopNumber": 3
+        },
+        {
+            "stationName": "Mughalsarai",
+            "stationCode": "MGS",
+            "arrivalTime": "23:30",
+            "departureTime": "23:35",
+            "stopNumber": 4
+        },
+        {
+            "stationName": "Gaya",
+            "stationCode": "GAYA",
+            "arrivalTime": "01:30",
+            "departureTime": "01:35",
+            "stopNumber": 5
+        },
+        {
+            "stationName": "Patna",
+            "stationCode": "PNBE",
+            "arrivalTime": "03:15",
+            "departureTime": "03:25",
+            "stopNumber": 6
+        },
+        {
+            "stationName": "Jasidih",
+            "stationCode": "JSME",
+            "arrivalTime": "05:00",
+            "departureTime": "05:02",
+            "stopNumber": 7
+        },
+        {
+            "stationName": "Asansol",
+            "stationCode": "ASN",
+            "arrivalTime": "07:10",
+            "departureTime": "07:15",
+            "stopNumber": 8
+        },
+        {
+            "stationName": "Durgapur",
+            "stationCode": "DGR",
+            "arrivalTime": "08:02",
+            "departureTime": "08:05",
+            "stopNumber": 9
+        },
+        {
+            "stationName": "Howrah",
+            "stationCode": "HWH",
+            "arrivalTime": "10:00",
+            "departureTime": "00:00",
+            "stopNumber": 10
+        }
+    ],
+    "schedule": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+    "startStation": "New Delhi",
+    "endStation": "Howrah",
+    "distance": 1450,
+    "duration": "17:10"
+}
+
+
+{
+    "trainNo": 12002,
+    "trainName": "Shatabdi Express",
+    "route": [
+        {
+            "stationName": "Bhopal",
+            "stationCode": "BPL",
+            "arrivalTime": "00:00",
+            "departureTime": "05:55",
+            "stopNumber": 1
+        },
+        {
+            "stationName": "Jhansi",
+            "stationCode": "JHS",
+            "arrivalTime": "08:20",
+            "departureTime": "08:25",
+            "stopNumber": 2
+        },
+        {
+            "stationName": "Agra",
+            "stationCode": "AGC",
+            "arrivalTime": "10:15",
+            "departureTime": "10:20",
+            "stopNumber": 3
+        },
+        {
+            "stationName": "New Delhi",
+            "stationCode": "NDLS",
+            "arrivalTime": "12:45",
+            "departureTime": "00:00",
+            "stopNumber": 4
+        }
+    ],
+    "schedule": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+    "startStation": "Bhopal",
+    "endStation": "New Delhi",
+    "distance": 707,
+    "duration": "6:50"
+}
+
+
+{
+    "trainNo": 12245,
+    "trainName": "Duronto Express",
+    "route": [
+        {
+            "stationName": "Howrah",
+            "stationCode": "HWH",
+            "arrivalTime": "00:00",
+            "departureTime": "08:00",
+            "stopNumber": 1
+        },
+        {
+            "stationName": "Bhubaneswar",
+            "stationCode": "BBS",
+            "arrivalTime": "13:45",
+            "departureTime": "13:50",
+            "stopNumber": 2
+        },
+        {
+            "stationName": "Visakhapatnam",
+            "stationCode": "VSKP",
+            "arrivalTime": "18:25",
+            "departureTime": "18:45",
+            "stopNumber": 3
+        },
+        {
+            "stationName": "Secunderabad",
+            "stationCode": "SC",
+            "arrivalTime": "04:30",
+            "departureTime": "04:35",
+            "stopNumber": 4
+        },
+        {
+            "stationName": "Pune",
+            "stationCode": "PUNE",
+            "arrivalTime": "15:15",
+            "departureTime": "00:00",
+            "stopNumber": 5
+        }
+    ],
+    "schedule": ["Monday", "Wednesday", "Friday"],
+    "startStation": "Howrah",
+    "endStation": "Pune",
+    "distance": 2021,
+    "duration": "31:15"
+}
+
+
+{
+    "trainNo": 12909,
+    "trainName": "Garib Rath Express",
+    "route": [
+        {
+            "stationName": "Mumbai Central",
+            "stationCode": "BCT",
+            "arrivalTime": "00:00",
+            "departureTime": "17:15",
+            "stopNumber": 1
+        },
+        {
+            "stationName": "Surat",
+            "stationCode": "ST",
+            "arrivalTime": "20:40",
+            "departureTime": "20:45",
+            "stopNumber": 2
+        },
+        {
+            "stationName": "Vadodara",
+            "stationCode": "BRC",
+            "arrivalTime": "22:10",
+            "departureTime": "22:15",
+            "stopNumber": 3
+        },
+        {
+            "stationName": "Ratlam",
+            "stationCode": "RTM",
+            "arrivalTime": "01:20",
+            "departureTime": "01:25",
+            "stopNumber": 4
+        },
+        {
+            "stationName": "Kota",
+            "stationCode": "KOTA",
+            "arrivalTime": "04:10",
+            "departureTime": "04:15",
+            "stopNumber": 5
+        },
+        {
+            "stationName": "Mathura",
+            "stationCode": "MTJ",
+            "arrivalTime": "07:15",
+            "departureTime": "07:20",
+            "stopNumber": 6
+        },
+        {
+            "stationName": "New Delhi",
+            "stationCode": "NDLS",
+            "arrivalTime": "09:40",
+            "departureTime": "00:00",
+            "stopNumber": 7
+        }
+    ],
+    "schedule": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+    "startStation": "Mumbai Central",
+    "endStation": "New Delhi",
+    "distance": 1386,
+    "duration": "16:25"
+}
+
+
+{
+    "trainNo": 12595,
+    "trainName": "Humsafar Express",
+    "route": [
+        {
+            "stationName": "Gorakhpur",
+            "stationCode": "GKP",
+            "arrivalTime": "00:00",
+            "departureTime": "15:00",
+            "stopNumber": 1
+        },
+        {
+            "stationName": "Lucknow",
+            "stationCode": "LKO",
+            "arrivalTime": "18:05",
+            "departureTime": "18:10",
+            "stopNumber": 2
+        },
+        {
+            "stationName": "Kanpur",
+            "stationCode": "CNB",
+            "arrivalTime": "19:25",
+            "departureTime": "19:30",
+            "stopNumber": 3
+        },
+        {
+            "stationName": "Aligarh",
+            "stationCode": "ALJN",
+            "arrivalTime": "22:45",
+            "departureTime": "22:50",
+            "stopNumber": 4
+        },
+        {
+            "stationName": "Ghaziabad",
+            "stationCode": "GZB",
+            "arrivalTime": "00:15",
+            "departureTime": "00:17",
+            "stopNumber": 5
+        },
+        {
+            "stationName": "Anand Vihar Terminal",
+            "stationCode": "ANVT",
+            "arrivalTime": "01:15",
+            "departureTime": "00:00",
+            "stopNumber": 6
+        }
+    ],
+    "schedule": ["Monday", "Thursday", "Saturday"],
+    "startStation": "Gorakhpur",
+    "endStation": "Anand Vihar Terminal",
+    "distance": 861,
+    "duration": "10:15"
+}
