@@ -5,7 +5,7 @@ import cookieParser from "cookie-parser";
 const app = express()
 
 app.use(cors({
-    origin: process.env.CORS_ORIGIN,
+    origin: ["https://trainbookingsystem-fe.onrender.com"],
     methods: ["GET", "POST", "DELETE", "PUT"],
     credentials: true
 }))
