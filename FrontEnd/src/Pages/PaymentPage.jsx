@@ -6,6 +6,7 @@ import "react-toastify/dist/ReactToastify.css";
 import useDebounce from '../customHooks/deBounceHook';
 
 export default function PaymentPage() {
+ 
     const journeyData = JSON.parse(localStorage.getItem('journeyData'));
     const [paymentMethod, setPaymentMethod] = useState('');
     const navigate = useNavigate()
@@ -42,50 +43,56 @@ export default function PaymentPage() {
     }
 
     const handlePaymentSuccess = async (response) => {
-        const pnrNo = await generateUniquePNR()
-        localStorage.setItem('pnrNo', JSON.stringify(pnrNo))
-
-        const formData = {
-            trainId: journeyData.train._id,
-            dateOfJourney: journeyData.date,
-            pnrNo,
-            source: journeyData.source,
-            destination: journeyData.destination,
-            departureTime: journeyData.departureTime,
-            arrivalTime: journeyData.arrivalTime,
-            className: journeyData.type,
-            passengers: journeyData.passengers,
-            totalFare: journeyData.prices[journeyData.type] * journeyData.passengers.length,
-            paymentMethod,
-            paymentId: response.razorpay_payment_id,
-            orderId: response.razorpay_order_id,
-            currency: 'INR'
-        };
-
-        const bookingResponse = await fetch('/api/v1/book-ticket/bookings', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify(formData),
-        });
-
-        const result = await bookingResponse.json();
-        console.log(result);
-
-        if (!result.success) {
-            notify("An unexpected error occurred. Please try again later.", 'error');
-            setTimeout(() => {
-                navigate('/', { replace: true });
-            }, 2000);
-        } else {
-            notify(result.message, 'success');
-            setTimeout(() => {
-                window.location.href = '/print-ticket'; // Force redirect to avoid stuck state
-            }, 2000);
+        try {
+            // Generate Unique PNR
+            const pnrNo = await generateUniquePNR();
+            localStorage.setItem('pnrNo', JSON.stringify(pnrNo));
+    
+            
+    
+            // Prepare booking details
+            const formData = {
+                trainId: journeyData.train._id,
+                dateOfJourney: journeyData.date,
+                pnrNo,
+                source: journeyData.source,
+                destination: journeyData.destination,
+                departureTime: journeyData.departureTime,
+                arrivalTime: journeyData.arrivalTime,
+                className: journeyData.type,
+                passengers: journeyData.passengers,
+                totalFare: journeyData.prices[journeyData.type] * journeyData.passengers.length,
+                paymentMethod,
+                paymentId: response.razorpay_payment_id,
+                orderId: response.razorpay_order_id,
+                currency: 'INR'
+            };
+    
+            // Store booking in the database
+            const bookingResponse = await fetch('/api/v1/book-ticket/bookings', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(formData),
+            });
+    
+            const result = await bookingResponse.json();
+            console.log("Booking Response:", result);
+    
+            if (!result.success) {
+                notify("An unexpected error occurred. Please try again later.", 'error');
+                setTimeout(() => {
+                    navigate('/', { replace: true });
+                }, 2000);
+            } else {
+                notify(result.message, 'success');
+                navigate('/print-ticket');  // Redirect immediately after booking success
+            }
+        } catch (error) {
+            console.error("Error in handlePaymentSuccess:", error);
+            notify("Something went wrong. Please try again later.", 'error');
         }
-        
-    }
+    };
+    
 
     const createOrder = async () => {
         try {

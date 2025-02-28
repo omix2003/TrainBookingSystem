@@ -25,7 +25,7 @@ export default function PassengerDetails() {
     const handlePassengerData = useCallback((e) => {
         e.preventDefault()
         bookingData.passengers = passengers
-        // console.log(bookingData);
+        console.log(bookingData);
         localStorage.setItem('journeyData', JSON.stringify(bookingData))
         navigate('/payment', { replace: true })
     }, [bookingData, passengers, navigate])

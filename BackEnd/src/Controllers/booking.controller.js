@@ -76,7 +76,7 @@ const createBooking = asyncHandler(async (req, res) => {
 
         const savedPayment = await payment.save({ session })
         if (!savedPayment)
-            throw new ApiError(500, "Spmething went wrong while creating payment")
+            throw new ApiError(500, "Something went wrong while creating payment")
 
         let classIdx = -1
         for (let i = 0; i < schedule.seats.length; i++)
@@ -302,8 +302,10 @@ const getAllPNR = asyncHandler(async (req, res) => {
                 }
             }
         ])
-        if (!PNRlist || PNRlist.length === 0)
-            throw new ApiError(500, "Something went wrong while fetching PNR nos.")
+       if (!PNRlist) {
+           console.error("Error fetching PNR list");
+            return res.status(500).json(new ApiResponse(500, null, "Internal server error"));
+        }
 
         return res.status(200).json(
             new ApiResponse(
@@ -313,7 +315,8 @@ const getAllPNR = asyncHandler(async (req, res) => {
             )
         )
     } catch (error) {
-
+        console.error("Error in getAllPNR:", error);
+        return res.status(500).json(new ApiResponse(500, null, "Internal server error"));
     }
 })
 
